@@ -1,0 +1,20 @@
+# ==== Prefix ====
+# fix		バグ修正/bug fix
+# feat		新規開発や追加開発に使用する/indicate the addition or modification of a new feature in the codebase. 
+# docs		ドキュメントのみ修正する際に使用/only fix documents.
+# style		空白、セミコロン、行、コーディングフォーマットなどの修正/only fix space, semicolon, line, and coding format.
+# refactor	リファクタリング等のコミットに使用/only refactaring commit.
+# test		テスト追加や間違っていたテストの修正などに使用/only add test or fix test commit.
+# chore		ビルドツールやライブラリ追加などをコミットするときに使用/add buikd tool or library commit.
+
+# ==== Emojis ====
+# :bug:         fix
+# :+1:          fix/feat
+# :sparkles:    feat
+# :rocket:      feat(perfomance improve)
+# :cop:         feat(security)
+# :note:        docs
+# :shirt:       style
+# :recycle:     refactor
+# :green_heart: test
+# :up:          chore

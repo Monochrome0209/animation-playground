@@ -1,3 +1,57 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "extends": ["eslint:recommended", "next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "import","unused-imports"],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        /**
+         * 下記のソート順でグループ分けする
+         * ① 組み込みモジュール
+         * ② ライブラリ
+         * ③ 自作のモジュール
+         * ④ 親ディレクトリのファイル
+         * ⑤ 同階層のファイル
+         * ⑥ 同階層のindexファイル
+         */
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          [
+            "parent",
+            "sibling"
+          ],
+          "object",
+          "type",
+          "index"
+        ],
+        // 各グループ間に改行を挿入する
+        "newlines-between": "always",
+        "pathGroupsExcludedImportTypes": [
+          "builtin"
+        ],
+        "alphabetize": {
+          // アルファベット昇順にソート
+          "order": "asc",
+          // 大文字小文字を区別してソート
+          "caseInsensitive": true
+        }
+        // "pathGroups": [
+        //   {
+        //     "pattern": "@/components/common",
+        //     "group": "internal",
+        //     "position": "before"
+        //   },
+        //   {
+        //     "pattern": "@/components/hooks",
+        //     "group": "internal",
+        //     "position": "before"
+        //   },
+        // ]
+      }
+    ]
+  }
 }
