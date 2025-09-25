@@ -1,0 +1,20 @@
+{
+  "name": "animation-playground",
+  "version": "1.0.0",
+  "description": "Anime.js animation playground project",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve . -l 3000"
+  },
+  "keywords": [
+    "animation",
+    "animejs",
+    "javascript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "animejs": "^4.0.0"
+  }
+}
